@@ -23,4 +23,3 @@ pub fn root(image_src: String, quote_text: String, quote_author: String) {
     html.img([attribute.src(image_src), attribute.alt("Great wolf!")]),
   ])
 }
-

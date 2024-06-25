@@ -1,8 +1,8 @@
+import app/router
+import app/web
 import gleam/erlang/process
 import mist
 import wisp
-import app/web
-import app/router
 
 pub fn main() {
   wisp.configure_logger()
@@ -11,10 +11,7 @@ pub fn main() {
   let assert Ok(_) =
     wisp.mist_handler(router.handle_request(_, ctx), secret)
     |> mist.new
-    |> mist.port(1480)
+    |> mist.port(8080)
     |> mist.start_http
   process.sleep_forever()
 }
-
-
-

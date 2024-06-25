@@ -1,8 +1,8 @@
+import app/model.{type AppError}
+import app/web.{type Context}
 import gleam/list
 import gleam/result
 import simplifile
-import app/web.{type Context}
-import app/model.{type AppError}
 
 pub fn get_images(ctx: Context) -> Result(List(String), AppError) {
   simplifile.read_directory(ctx.static_directory <> "/images")
@@ -17,4 +17,3 @@ pub fn get_random_image(ctx: Context) -> Result(String, AppError) {
   |> list.first
   |> result.replace_error(model.NoImagesError)
 }
-

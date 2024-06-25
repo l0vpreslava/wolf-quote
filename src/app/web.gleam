@@ -1,11 +1,11 @@
+import app/model.{type AppError, type QuoteResponse}
 import gleam/dynamic
-import gleam/http/request
 import gleam/hackney
-import gleam/result
-import gleam/json
+import gleam/http/request
 import gleam/http/response
+import gleam/json
+import gleam/result
 import wisp.{type Request, type Response}
-import app/model.{type QuoteResponse, type AppError}
 
 pub type Context {
   Context(static_directory: String)
@@ -62,4 +62,3 @@ pub fn error_on_status(
     False -> Ok(r)
   }
 }
-

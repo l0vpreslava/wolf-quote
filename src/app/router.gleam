@@ -1,11 +1,11 @@
+import app/images
+import app/pages
+import app/web.{type Context}
 import gleam/result
 import gleam/string
 import gleam/string_builder
-import wisp.{type Request, type Response} 
 import lustre/element
-import app/images
-import app/web.{type Context}
-import app/pages
+import wisp.{type Request, type Response}
 
 pub fn handle_request(req: Request, ctx: Context) -> Response {
   use _req <- web.middleware(req, ctx)
@@ -26,4 +26,3 @@ pub fn handle_request(req: Request, ctx: Context) -> Response {
   }
   wisp.html_response(response.0, response.1)
 }
-
