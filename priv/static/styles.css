@@ -1,0 +1,17 @@
+.quote-text{
+    text-align:center;
+    font-style: italic;
+    font-family: Courier New;
+}
+
+.quote-author{
+    text-align: right;
+    font-family: Courier New;
+    margin-left: 1000;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
