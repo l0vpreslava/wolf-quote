@@ -15,27 +15,29 @@ pub fn layout(elements: List(Element(a))) -> Element(a) {
         attribute.rel("stylesheet"),
         attribute.href("static/styles.css"),
       ]),
+      html.script([attribute.src("static/script.js")], ""),
     ]),
     html.body([], elements),
   ])
 }
 
 pub fn root(image_src: String, quote_text: String, quote_author: String) {
+  let quote_text = "«" <> quote_text <> "»"
   layout([
     html.div([], [
-      html.div([attribute.class("image")], [
+      html.div([], [
         html.img([
           attribute.src(image_src),
-          attribute.width(480),
-          attribute.height(270),
+          attribute.class("image"),
           attribute.alt("Great wolf!"),
         ]),
       ]),
-      html.div([], [
+      html.div([attribute.class("quote-block")], [
         html.h1([attribute.class("quote-text")], [html.text(quote_text)]),
-      ]),
-      html.div([], [
         html.h2([attribute.class("quote-author")], [html.text(quote_author)]),
+        html.button([attribute.class("reload-button")], [
+          html.text("Новая цитата"),
+        ]),
       ]),
     ]),
   ])

@@ -1,17 +1,52 @@
+* {
+   margin: 0;
+}
+
+body{
+    background: rgb(245, 248, 250);
+}
+
 .quote-text{
     text-align:center;
-    font-style: italic;
-    font-family: Courier New;
+    font-family: Georgia,times new roman,serif;
+    font-size:25px !important;
 }
 
 .quote-author{
     text-align: right;
-    font-family: Courier New;
-    margin-left: 1000;
+    font-style: italic;
+    font-family: Georgia,times new roman,serif;
+    font-size:25px !important;
 }
 
-.image{
+.quote-block{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.reload-button{
+    background-color: rgb(245, 248, 250);
+    color: rgb(56, 68, 99);
+    text-align: centre;
+    margin: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 2%;
+    text-decoration: none; 
+    user-select: none;
+    padding: .7em 1.5em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;
+
+}
+.reload-button:hover{background: rgba(255,255,255,.2)}
+.reload-button:active{background: gray}
+.image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding-top: 1%;
+    padding-bottom: 1%
 }
