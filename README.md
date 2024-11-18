@@ -1,5 +1,7 @@
 # wolf_quotes
 
+You can check the finished website - [link](https://wolf-quotes.fly.dev/)
+
 [![Package Version](https://img.shields.io/hexpm/v/wolf_quotes)](https://hex.pm/packages/wolf_quotes)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/wolf_quotes/)
 
